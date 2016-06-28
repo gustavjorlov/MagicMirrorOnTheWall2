@@ -4,9 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "copy": "cp src/index.html dist",
+    "compile": "browserify src/app.js -t babelify --debug -o dist/app.js",
+    "build": "npm run copy && npm run compile",
+    "server": "http-server dist"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1"
+  },
+  "dependencies": {
+    "http-server": "^0.9.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  }
 }
