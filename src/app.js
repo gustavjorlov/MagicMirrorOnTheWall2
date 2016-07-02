@@ -3,6 +3,7 @@ import React from 'react';
 
 import Weather from './components/Weather.jsx';
 import News from './components/News.jsx';
+import Exercise from './components/Exercise.jsx';
 
 class Mirror extends React.Component{
     render(){
@@ -11,6 +12,7 @@ class Mirror extends React.Component{
                 <h1>This is it!</h1>
                 <Weather />
                 <News />
+                <Exercise />
             </div>
         );
     }
