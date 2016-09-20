@@ -4,15 +4,13 @@ import React from 'react';
 import Weather from './components/Weather.jsx';
 import News from './components/News.jsx';
 import Exercise from './components/Exercise.jsx';
+import Date from './components/Date.jsx';
 
 class Mirror extends React.Component{
     render(){
         return (
             <div>
-                <h1>This is it!</h1>
-                <Weather />
-                <News />
-                <Exercise />
+                <Date />
             </div>
         );
     }
