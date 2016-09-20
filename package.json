@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf dist && mkdir dist",
     "copy": "cp src/index.html dist",
     "compile": "browserify src/app.js -t babelify --debug -o dist/app.js",
-    "build": "npm run copy && npm run compile",
+    "build": "npm run clean && npm run copy && npm run compile",
     "server": "http-server dist"
   },
   "engines": {
-      "node": "4.2.1",
-      "npm": "3.7.0"
+    "node": "4.2.1",
+    "npm": "3.7.0"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
   "dependencies": {
     "http-server": "^0.9.0",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "rimraf": "^2.5.4"
   }
 }
