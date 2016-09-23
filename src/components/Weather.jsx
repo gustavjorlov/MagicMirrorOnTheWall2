@@ -38,7 +38,7 @@ export default class Weather extends React.Component{
         });
     }
     render(){
-        return (<div>
+        return (<div className="weather_box">
             <h2>{this.state.today.summary}</h2>
             <h3>{this.state.today.temperature} &ordm;C</h3>
         </div>);
