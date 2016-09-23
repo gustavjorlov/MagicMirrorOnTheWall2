@@ -5,4 +5,5 @@
 - `npm run build`
 
 ## Run
-`npm start`
+- `npm start`
+- Visit localhost:3000
