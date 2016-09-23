@@ -8,7 +8,8 @@
     "copy": "cp src/index.html dist",
     "compile": "browserify src/app.js -t babelify --debug -o dist/app.js",
     "build": "npm run clean && npm run copy && npm run compile",
-    "server": "http-server dist"
+    "server": "http-server dist",
+    "start": "node src/server.js"
   },
   "engines": {
     "node": "4.2.1",
@@ -24,10 +25,13 @@
     "browserify": "^13.0.1"
   },
   "dependencies": {
+    "express": "^4.14.0",
     "http-server": "^0.9.0",
+    "jquery": "^3.1.1",
     "moment": "^2.15.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
+    "request": "^2.75.0",
     "rimraf": "^2.5.4"
   }
 }

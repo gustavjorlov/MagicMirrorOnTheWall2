@@ -11,6 +11,7 @@ class Mirror extends React.Component{
         return (
             <div>
                 <Date />
+                <Weather />
             </div>
         );
     }
@@ -24,3 +25,6 @@ const render = () => {
 }
 
 render();
+
+//https://api.darksky.net/forecast/4e88566db0707cea6ea8091f3fc84377/57.9300,12.5362
+//https://darksky.net/dev/account
