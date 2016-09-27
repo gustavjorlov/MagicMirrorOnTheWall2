@@ -5,12 +5,15 @@ export default class Exercise extends React.Component{
     constructor(){
         super();
         this.state = {
-            sofia: { minutes: 1200 },
-            gustav: { minutes: 4200 }
+            sofia: { minutes: 420 },
+            gustav: { minutes: 120 }
         };
     }
 
     render(){
-        return (<h2>Exercise! {this.state.gustav.minutes}</h2>);
+        return (<div className="exercise_container">
+            <div id="gustav" className="exercise_bar" style={{height: this.state.gustav.minutes+"px"}}><p>Gustav</p></div>
+            <div id="sofia" className="exercise_bar" style={{height: this.state.sofia.minutes+"px"}}><p>Sofia</p></div>
+        </div>);
     }
 }

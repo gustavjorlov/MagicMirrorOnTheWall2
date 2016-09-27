@@ -10,10 +10,13 @@ import Greeting from './components/Greeting.jsx';
 class Mirror extends React.Component{
     render(){
         return (
-            <div className="flex-container">
-                <Date />
-                <div className="line flex-item"></div>
-                <Weather />
+            <div className="content">
+                <div className="flex-container">
+                    <Date />
+                    <div className="line flex-item"></div>
+                    <Weather />
+                </div>
+                <Exercise />
             </div>
         );
     }
