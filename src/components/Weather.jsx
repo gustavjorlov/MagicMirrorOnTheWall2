@@ -18,11 +18,16 @@ export default class Weather extends React.Component{
         };
     }
     componentDidMount(){
-        $.ajax("/weather", { success: (response, status) => {
-            this.setState(JSON.parse(response));
-        }, error: function(){
-            console.log(":()");
-        }});
+        const getWeather = () => {
+            $.ajax("/weather", { success: (response, status) => {
+                this.setState(JSON.parse(response));
+            }, error: function(){
+                console.log(":()");
+            }});
+        }
+
+        setInterval(getWeather, 4*60*60*1000); //hours*minutes*seconds*milliseconds == 4 hours
+        getWeather();
     }
     render(){
         return (<div className="flex-item weather">

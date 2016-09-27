@@ -5,8 +5,8 @@ export default class Exercise extends React.Component{
     constructor(){
         super();
         this.state = {
-            sofia: { minutes: 420 },
-            gustav: { minutes: 120 }
+            sofia: { minutes: 220 },
+            gustav: { minutes: 80 }
         };
     }
 
