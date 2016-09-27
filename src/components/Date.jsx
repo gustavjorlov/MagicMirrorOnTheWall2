@@ -21,9 +21,9 @@ export default class Date extends React.Component{
     }
     render(){
         return (
-            <div className="date_box">
-                <h2>{this.state.time}</h2>
-                <h3>{this.state.day}</h3>
+            <div className="flex-item date">
+                <h2>{this.state.day}</h2>
+                <h3>{this.state.time}</h3>
             </div>
         );
     }
