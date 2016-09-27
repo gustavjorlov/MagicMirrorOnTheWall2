@@ -10,6 +10,7 @@
     "compile:prod": "browserify src/app.js -t babelify | uglifyjs > dist/app.js",
     "compile": "browserify src/app.js -t babelify --debug -o dist/app.js",
     "build": "npm run clean && npm run copy:html && npm run copy:icons && npm run compile",
+    "build:prod": "npm run clean && npm run copy:html && npm run copy:icons && npm run compile:prod",
     "start": "node src/server.js"
   },
   "engines": {
