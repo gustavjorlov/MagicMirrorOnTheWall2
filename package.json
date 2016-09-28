@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf dist && mkdir dist",
-    "copy:html": "cp src/index.html dist",
+    "clean": "rimraf dist && mkdir dist && mkdir dist/libs",
+    "copy:html": "cp src/index.html dist && cp -r src/server/register dist",
     "copy:icons": "cp -rf src/assets dist",
+    "copy:thirdparties": "mkdir dist/libs/bootstrap && cp -rf node_modules/bootstrap/dist/ dist/libs/bootstrap",
+    "copy": "npm run copy:html && npm run copy:icons && npm run copy:thirdparties",
     "compile:prod": "browserify src/app.js -t babelify | uglifyjs > dist/app.js",
+    "compile:server": "browserify src/server/register/RegisterContainer.js -t babelify --debug -o dist/register/bundle.js",
     "compile": "browserify src/app.js -t babelify --debug -o dist/app.js",
-    "build": "npm run clean && npm run copy:html && npm run copy:icons && npm run compile",
-    "build:prod": "npm run clean && npm run copy:html && npm run copy:icons && npm run compile:prod",
+    "build": "npm run clean && npm run copy && npm run compile && npm run compile:server",
+    "build:prod": "npm run clean && npm run copy && npm run compile:prod && npm run compile:server",
     "start": "node src/server.js"
   },
   "engines": {

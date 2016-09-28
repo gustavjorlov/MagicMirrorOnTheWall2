@@ -18,6 +18,14 @@ app.get("/weather", function(req, res){
     });
 });
 
+app.get("/register", function(req, res){
+    
+})
+
+app.post("/register", function(req, res){
+
+});
+
 app.listen(app.get('port'), function(){
     console.log("Listening to " + app.get('port'));
 });
