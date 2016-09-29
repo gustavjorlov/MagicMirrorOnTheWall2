@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RegisterPresentation = ({onSubmit}) => {
+const RegisterPresentation = ({onSubmit, onPersonClicked, clickedButton}) => {
     return (<div className="row">
         <div className="col-md-1">
             <div className="page-header">
@@ -10,11 +10,11 @@ const RegisterPresentation = ({onSubmit}) => {
         <div className="col-md-1">
             <div className="form-group">
                 <div className="btn-group btn-group-justified btn-group-lg" role="group">
-                    <div className="btn-group btn-group-lg" role="group">
-                        <button type="button" className="btn btn-default">Sofia</button>
+                    <div className={"btn-group btn-group-lg"} role="group">
+                        <button onClick={onPersonClicked.bind(null, 'sofia')} type="button" className={"btn btn-default " + (clickedButton === 'sofia' ? 'active' : '')}>Sofia</button>
                     </div>
                     <div className="btn-group btn-group-lg" role="group">
-                        <button type="button" className="btn btn-default">Gustav</button>
+                        <button onClick={onPersonClicked.bind(null, 'gustav')} type="button" className={"btn btn-default " + (clickedButton === 'gustav' ? 'active' : '')}>Gustav</button>
                     </div>
                 </div>
             </div>
