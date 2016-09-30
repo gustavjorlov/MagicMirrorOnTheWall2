@@ -2,12 +2,12 @@ import React from 'react';
 
 const RegisterPresentation = ({onSubmit, onPersonClicked, clickedButton}) => {
     return (<div className="row">
-        <div className="col-md-1">
+        <div className="col-md-12">
             <div className="page-header">
                 <h1>Träning</h1>
             </div>
         </div>
-        <div className="col-md-1">
+        <div className="col-md-12">
             <div className="form-group">
                 <div className="btn-group btn-group-justified btn-group-lg" role="group">
                     <div className={"btn-group btn-group-lg"} role="group">

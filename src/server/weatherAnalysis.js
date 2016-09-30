@@ -25,7 +25,6 @@ var getDailySummary = function(responseBody){
     return {
         all: weatherData,
         today: {
-            summary: weatherData.daily.data[0].summary,
             icon: getIconImage(weatherData.daily.data[0].icon),
             iconSummary: firstUpperCase(weatherData.daily.data[0].icon.split("-").join(" ")),
             temperature: {
