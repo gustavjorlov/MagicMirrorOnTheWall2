@@ -1,4 +1,5 @@
 var getDailySummary = function(responseBody){
+    console.log(responseBody);
     var weatherData = JSON.parse(responseBody);
     console.log(Object.keys(weatherData));
 
