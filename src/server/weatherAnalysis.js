@@ -1,5 +1,18 @@
 var getDailySummary = function(responseBody){
-    console.log(responseBody);
+    if(!responseBody){
+        return {
+            today: {
+                icon: "",
+                iconSummary: "",
+                temperature: {
+                    min: "",
+                    minTime: "",
+                    max: "",
+                    maxTime: ""
+                }
+            }
+        };
+    }
     var weatherData = JSON.parse(responseBody);
     console.log(Object.keys(weatherData));
 
