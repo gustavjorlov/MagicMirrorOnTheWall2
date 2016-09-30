@@ -21,7 +21,9 @@ var getDailySummary = function(responseBody){
         }
         return weatherIconMap[icon_code] + ".png";
     }
-
+    if(!weatherData){
+        return {'all': 'nothing :('};
+    }
     return {
         all: weatherData,
         today: {
