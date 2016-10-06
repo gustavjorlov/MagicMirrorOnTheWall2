@@ -21,7 +21,7 @@ export default class Date extends React.Component{
     }
     render(){
         return (
-            <div className="flex-item date">
+            <div className="flex-item date col-xs-4">
                 <h2>{this.state.day}</h2>
                 <h3>{this.state.time}</h3>
             </div>

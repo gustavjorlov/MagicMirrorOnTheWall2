@@ -3,10 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>Magic Mirror on the wall</title>
-        <link href="https://fonts.googleapis.com/css?family=Codystar" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400" rel="stylesheet">
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
         <style media="screen">
+        @font-face {
+            font-family: 'Raleway';
+            src: url('assets/fonts/Raleway.woff2');
+        }
         h2 {
             font-size: 50px;
             margin-top: 0px;
@@ -18,7 +20,7 @@
             font-weight: 100;
         }
         h2, h3 {
-            font-family: 'Raleway';
+            /*font-family: 'Raleway';*/
             margin-bottom: 0px;
         }
         body {
@@ -27,47 +29,58 @@
             padding: 0px;
             margin: 0px;
         }
-        .flex-container {
+        /*.flex-container {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: center;
             align-items: center;
-        }
+        }*/
         .weather, .date {
-            height: 300px;
+            /*height: 300px;
             width: 300px;
-            margin: 0px 50px;
-            display: flex;
+            margin: 0px 50px;*/
+            /*display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: center;*/
+            /*padding-top: 75px;*/
         }
-        .line{
-            display: inline-block;
+        .date{
+            text-align: right;
+            padding-top: 90px;
+        }
+        .weather{
+            padding-top: 71px;
+        }
+        .line-container{
+
+        }
+        .line {
             background: #999;
+            height: 300px;
+            margin: 0px auto;
             width: 2px;
-            height: 200px;
         }
         .exercise_container {
-            display: flex;
+            /*display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: flex-end;
-            flex-wrap: nowrap;
-            position: absolute;
-            bottom: 0px;
-            width: 100%;
+            flex-wrap: nowrap;*/
+            /*position: absolute;
+            bottom: 0px;*/
+            /*width: 100%;*/
         }
         .exercise_bar {
-            width: 200px;
+            /*width: 200px;*/
             text-align: center;
             border: 2px solid #999;
             border-bottom: none;
-            margin: 0px 40px;
+            /*margin: 0px 40px;*/
         }
         .exercise_bar p {
-            font-family: 'Raleway';
+            /*font-family: 'Raleway';*/
             font-size: 30px;
             margin-top: -40px;
         }
