@@ -15,7 +15,7 @@ export default class Date extends React.Component{
     }
     getTime(){
         return {
-            time: moment().format('LT'),
+            time: moment().add(2, 'hours').format('LT'),
             day: moment().format('D MMM')
         };
     }
